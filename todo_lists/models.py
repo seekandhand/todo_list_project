@@ -13,7 +13,7 @@ class Organization(models.Model):
 
 class ToDoList(models.Model):
     """
-    A table representing lines of ToDoList with and information whether they were crossed out
+    A table representing lines of ToDoList and information whether they were crossed out
     """
     organization = models.ForeignKey(Organization, on_delete=models.CASCADE, related_name='todo_list')
     text = models.TextField(max_length=1000)
